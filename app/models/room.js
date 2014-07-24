@@ -1,8 +1,5 @@
 'use strict';
 
-
-var Apartment = require('./apartment');
-
 function Room(name, width, length){
   this.name   = name;
   this.width  = parseInt(width);

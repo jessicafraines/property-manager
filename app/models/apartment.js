@@ -2,6 +2,8 @@
 /* Step 1
  * Make your constructor for apartment with 3 variables: unit, room = [];, renter = []
  */
+
+
 function Apartment(name){
   this.name    = name;
   this.rooms   = [];
@@ -14,7 +16,13 @@ function Apartment(name){
  Example: this.rooms[i].area += sum
  */
 
-
+Apartment.prototype.area = function(){
+  var sum = 0;
+  for(var i = 0; i < this.rooms.length; i++){
+    sum += this.rooms[i].area();
+  }
+  return sum;
+};
 
 
 /* #cost
