@@ -3,7 +3,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var Renter = require('../../app/models/property.js');
+var Renter = require('../../app/models/renter.js');
 
 describe('Renter', function(){
   describe('constructor', function(){
