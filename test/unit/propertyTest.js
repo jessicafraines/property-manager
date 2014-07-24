@@ -1,3 +1,4 @@
+/*jshint expr:true*/
 /*global describe, it*/
 'use strict';
 
@@ -13,7 +14,7 @@ describe('Renter', function(){
       expect(earl.age).to.equal(24);
       expect(earl.gender).to.equal('male');
       expect(earl.profession).to.equal('spartan');
-      expect(earl.cash).to.be.within(100, 500);
+      expect(earl.cash).to.be.within(100, 5000);
       expect(earl.isEvicted).to.equal(false);
     }); 
   });
@@ -23,7 +24,7 @@ describe('Renter', function(){
       var start = earl.cash;
       earl.work();
 
-      expect(earl.cash).to.be.within(150, 750);
+      expect(earl.cash).to.be.within(150, 5250);
       expect(earl.cash).to.be.above(start);
       
     });
@@ -36,11 +37,11 @@ describe('Renter', function(){
       earl.payRent(100);
 
       expect(earl.cash).to.be.below(start);
-      expect(earl.cash).to.be.within(0, 400);      
+      expect(earl.cash).to.be.within(0, 4900);      
     });
     it('should evict renter', function(){
       var earl = new Renter('earl', 24, 'male', 'spartan');
-      earl.payRent(600);
+      earl.payRent(6000);
 
       expect(earl.isEvicted).to.equal(true);
     });
