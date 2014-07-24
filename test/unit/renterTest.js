@@ -21,12 +21,29 @@ describe('Renter', function(){
   describe('#work', function(){
     it('should increase cash based on profession', function(){
       var earl = new Renter('earl', 24, 'male', 'spartan');
-      var start = earl.cash;
-      earl.work();
-
-      expect(earl.cash).to.be.within(150, 5250);
-      expect(earl.cash).to.be.above(start);
+      var earl2 = new Renter('earl', 24, 'male', 'movie star');
+      var earl3 = new Renter('earl', 24, 'male', 'waiter');
+      var earl4 = new Renter('earl', 24, 'male', 'coder');
+      var earl5 = new Renter('earl', 24, 'male', 'social worker');
       
+      earl.cash = 0;
+      earl2.cash = 0;
+      earl3.cash = 0;
+      earl4.cash = 0;
+      earl5.cash = 0;
+      
+      
+      earl.work();
+      earl2.work();
+      earl3.work();
+      earl4.work();
+      earl5.work();
+
+      expect(earl.cash).to.be.within(50, 250);
+      expect(earl2.cash).to.be.within(3000, 10000);
+      expect(earl3.cash).to.be.within(50, 250);
+      expect(earl4.cash).to.be.within(1000, 7000);
+      expect(earl5.cash).to.be.within(150, 750);
     });
   });
 
