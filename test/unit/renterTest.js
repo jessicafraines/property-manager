@@ -67,15 +67,11 @@ describe('Renter', function(){
   describe('#party', function(){
     it('should determine if you partied too hard', function(){
       var earl = new Renter('earl', 24, 'male', 'spartan');
-
       while(!earl.isEvicted){
         earl.party();
       }
       expect(earl.isEvicted).to.equal(true);
       
     });
-    });
-
-
-
+  });
 });
