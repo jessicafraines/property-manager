@@ -29,5 +29,4 @@ describe('Room', function(){
       expect(lr.cost()).to.equal(3000);
     });
   });
-
 });
